@@ -9,7 +9,7 @@ body {
     position: absolute;
     top: 20px;
     left: 25px;
-    z-index: 1000; /* Ensure the logo appears on top of other elements */
+    z-index: 1000; 
 }
 
 .logo img {
@@ -26,6 +26,71 @@ header {
     background-color: #232D4B;
     color: #fff;
     padding: 25px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.menu-items {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li {
+    margin-right: 20px;
+}
+
+.menu-items li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        background-color: #232D4B;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .menu-items li {
+        margin: 5px 0;
+    }
 }
 
 h1 {
@@ -90,9 +155,10 @@ footer {
     top: 50%;
     left: 20%; 
     transform: translate(-50%, -50%);
-    text-align: left; 
+    text-align: left;
     color: #fff;
     max-width: 40%; 
+    padding-left: 50px;
 }
 
 .hero__title {
