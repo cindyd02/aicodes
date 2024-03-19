@@ -4,6 +4,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 18px;
+    line-height: 1.38;
 }
 .logo {
     position: absolute;
@@ -44,6 +46,14 @@ header {
     width: 30px;
     height: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.bar, .close-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s ease;
 }
 
 .bar {
@@ -114,7 +124,7 @@ nav ul li a {
 }
 
 main {
-    padding: 80px;
+    padding: 70px;
     flex: 1;
 }
 
